@@ -1,0 +1,16 @@
+{
+    "artifact_name": "pulseout",
+    "requires": [ "bare-metal", "events" ],
+    "target_overrides": {
+        "*": {
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-baud-rate": 115200,
+            "platform.heap-stats-enabled": false,
+            "platform.stack-stats-enabled": false,
+            "target.c_lib": "std",
+            "target.printf_lib": "std",
+            "target.console-uart": true,
+            "events.shared-dispatch-from-application": true
+        }
+    }
+}
